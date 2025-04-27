@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic Tac Toe</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="wrapper">
-    <h1>TIC-TAC-TOE</h1>
-    <h2 class="result"></h2>
+    <h1 class="title">TIC-TAC-TOE</h1>
+    <h3>Round <span class="round-num">1</span></h3>
+    <div class="stats">
+      <p>You<span class="O-color">👤O</span> <span class="O-score">1</span></p>
+      <p>Tie <span>⚖️</span><span class="tie-score">2</span></p>
+      <p class="select-mode">Computer<span class="ai-mode"></span> <span class="X-score">3</span></p>
+    </div>
     <div class="board-container">
-      <p>Players</p>
-      <p>Player1<span class="player1-name"></span>:<span  class="player1">O</span></p>
-      <p>Player2<span class="player2-name"></span>:<span  class="player2">X</span></p>
-      <p>Score</p>
-      <p>O:<span  class="player1"></span></p>
-      <p>X:<span  class="player2"></span></p>
       <button class="board-grid" value="1"></button>
       <button class="board-grid" value="2"></button>
       <button class="board-grid" value="3"></button>
@@ -28,11 +27,21 @@
       <button class="board-grid" value="9"></button>
     </div>
     <div class="bottom-btn">
-      <button class="play-again">Play Again?</button>
-      <button class="reset"">Reset</button>
+      <button class="reset" onclick="reset()">Reset</button>
+      <button class="play-again" onclick="playAgain()">Play Again?</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <div class="modal">
+    <div class="modal-main">
+      <button value="easy">Easy 😀</button>
+      <button value="medium">Medium 😐</button>
+      <button value="hard">Hard 😡</button>
+    </div>
+  </div>
+
+  <!-- <script src="script.js"></script>
+  <script src="computer.js"></script> -->
+  <script src="computer-hard.js"></script>
 </body>
 </html>
